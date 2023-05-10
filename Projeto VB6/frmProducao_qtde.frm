@@ -1313,3 +1313,16 @@ Exit Function
 tratar_erro:
     MsgBox ("Descrição do erro : " + Error()), vbCritical
 End Function
+
+Private Sub USForm1_Click()
+On Error GoTo tratar_erro
+  
+Gravar = False
+Unload Me
+
+Exit Sub
+tratar_erro:
+    MsgBox ("Descrição do erro : " + Error()), vbCritical
+    Exit Sub
+End Sub
+
